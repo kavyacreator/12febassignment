@@ -1,0 +1,31 @@
+
+su=intcn=input('enter customer name:')
+ph=int(input('enter customer number:'))
+sugar=40
+teapow=130
+rav=100
+salt=20
+dal=120
+su=int(input('enter number of sugar packets:'))
+tea=int(input('enter number of tea packets:'))
+ravva=int(input('enter number of ravva packets:'))
+sa=int(input('enter number of salt packets:'))
+da=int(input('enter number of dal packets:'))
+bill=(sugar*su)+(teapow*tea)+(rav*ravva)+(salt*sa)+(dal*da)
+if bill>1000:
+    bill=bill-(bill*(3/100))
+    tax=(18/100)*bill
+    bill=bill+tax
+elif bill>2000:
+    bill=bill-(bill*(5/100))
+    tax=(18/100)*bill
+    bill=bill+tax
+elif bill>3000:
+    bill=bill-(bill*(8/100))
+    tax=(10/100)*100
+    bill=bill+tax
+elif bill>5000:
+    bill=bill-(bill*(10/100))
+    tax=(10/100)*100
+    bill=bill+tax
+print(int(bill))
